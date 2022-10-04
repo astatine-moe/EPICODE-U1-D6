@@ -1,12 +1,17 @@
-let firstName = `Morgan`;
-let middleName = `Robert`;
-let lastName = `Evans`;
+let firstName = `Morgan`,
+    lastName = `Evans`;
 
-console.log(`Hello, my name is ${firstName} ${middleName} ${lastName}.`);
-
-let age = 23;
-let currentYear = new Date().getFullYear();
+let age = 23,
+    currentYear = new Date().getFullYear();
 
 let birthYear = currentYear - age;
 
-console.log(`I was born in ${birthYear}.`);
+const homework = () => {
+    console.log(`Hello, my name is ${firstName} ${lastName}.`);
+    console.log(`I was born in ${birthYear}.`);
+};
+
+if (typeof window === "undefined") {
+    //if running in node
+    homework();
+}
